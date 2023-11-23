@@ -14,7 +14,9 @@ public class S_CadastroUsuario {
         this.r_cadastroUsuario = r_cadastroUsuario;
     }
 
-    public static void cadastroUsuario(String usuario, String senha, String email) {
+    public static String cadastroUsuario(String usuario, String senha, String email) {
+
+        String mensagem = "";
 
         M_CadastroUsuario m_cadastroUsuario = new M_CadastroUsuario();
         m_cadastroUsuario.setUsuario(usuario);
@@ -22,5 +24,7 @@ public class S_CadastroUsuario {
         m_cadastroUsuario.setEmail(email);
 
         r_cadastroUsuario.save(m_cadastroUsuario);
+
+        return "Cadastro realizado com sucesso";
     }
 }
