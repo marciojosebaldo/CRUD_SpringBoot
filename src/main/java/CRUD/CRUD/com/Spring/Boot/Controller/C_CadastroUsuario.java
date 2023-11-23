@@ -17,6 +17,6 @@ public class C_CadastroUsuario {
     public static String postCadastroUsuario(@RequestParam("usuario") String usario,
                                              @RequestParam("senha") String senha,
                                              @RequestParam("email") String email){
-        return null;
+        return "Login/login";
     }
 }
