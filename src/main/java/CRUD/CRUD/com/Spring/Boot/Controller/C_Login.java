@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class C_Login {
 
-    @GetMapping("/")
+    @GetMapping("Login/login")
     public static String getLogin(HttpSession session) {
         if (session.getAttribute("usuario") != null) {
-            return "redirect:/home";
+            return "CRUD/home";
         } else {
-            return "Login/login";
+            return "redirect:/login";
         }
     }
 }

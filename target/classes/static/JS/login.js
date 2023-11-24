@@ -1,12 +1,12 @@
 $("#btnLogin").click(fazerLogin);
 
 function fazerLogin(){
-    let email = $("#email").val();
-    let senha = $("#senha").val();
+    let email = $("#emailInput").val();
+    let senha = $("#senhaInput").val();
 
     $.ajax({
-        type: POST,
-        url: /login,
+        type: "POST",
+        url: "/",
         data: {
             email: email,
             senha: senha
