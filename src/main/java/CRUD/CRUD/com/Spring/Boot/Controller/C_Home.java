@@ -8,11 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class C_Home {
 
     @GetMapping("/")
-    public static String getHome(HttpSession session){
-        if (session.getAttribute("usuario") != null) {
-            return "redirect:/home";
-        } else {
-            return "Login/login";
-        }
+    public static String getHome() {
+        return "Login/login";
     }
 }
+
