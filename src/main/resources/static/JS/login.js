@@ -13,7 +13,7 @@ function fazerLogin(){
         },
         success: function(data){
             if(data) {
-                window.location.href="/home";
+                window.location.href="CRUD/home";
             } else {
                 alert("Usuário e senhas inválidos!")
             }
