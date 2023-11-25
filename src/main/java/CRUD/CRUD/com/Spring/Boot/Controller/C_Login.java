@@ -27,8 +27,11 @@ public class C_Login {
                                 @RequestParam("senha") String senha,
                                 HttpSession session) {
 
-        if (session.setAttribute("usuario", S_Usuario.validaLogin(email, senha)) {
+        session.setAttribute("usuario", S_Usuario.validaLogin(email, senha));
+
+        if (session.getAttribute("usuario") != null) {
             return true;
         }
+        return false;
     }
 }

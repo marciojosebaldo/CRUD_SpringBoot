@@ -1,9 +1,7 @@
 package CRUD.CRUD.com.Spring.Boot.Service;
 
-import CRUD.CRUD.com.Spring.Boot.Model.M_CadastroUsuario;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_CadastroUsuario;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class S_CadastroUsuario {

@@ -2,7 +2,6 @@ package CRUD.CRUD.com.Spring.Boot.Model;
 
 import jakarta.persistence.*;
 
-
 @Entity
 @Table(name = "usuario")
 public class M_Usuario {
