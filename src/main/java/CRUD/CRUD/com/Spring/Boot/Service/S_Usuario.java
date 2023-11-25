@@ -2,6 +2,7 @@ package CRUD.CRUD.com.Spring.Boot.Service;
 
 import CRUD.CRUD.com.Spring.Boot.Model.M_Usuario;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_Usuario;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class S_Usuario {
     private static R_Usuario r_usuario;
 
+    @Autowired
     public S_Usuario(R_Usuario r_usuario) {
         this.r_usuario = r_usuario;
     }

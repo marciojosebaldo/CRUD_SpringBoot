@@ -20,7 +20,7 @@ public class C_Login {
         }
     }
 
-    @PostMapping("Login/login")
+    @PostMapping("/Login/login")
     @ResponseBody
 
     public boolean validarLogin(@RequestParam("email") String email,
