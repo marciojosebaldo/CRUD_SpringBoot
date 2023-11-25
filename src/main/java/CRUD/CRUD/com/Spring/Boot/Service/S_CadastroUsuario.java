@@ -1,5 +1,6 @@
 package CRUD.CRUD.com.Spring.Boot.Service;
 
+import CRUD.CRUD.com.Spring.Boot.Model.M_Usuario;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_CadastroUsuario;
 import org.springframework.stereotype.Service;
 
@@ -16,12 +17,12 @@ public class S_CadastroUsuario {
 
         String mensagem = "";
 
-        M_CadastroUsuario m_cadastroUsuario = new M_CadastroUsuario();
-        m_cadastroUsuario.setUsuario(usuario);
-        m_cadastroUsuario.setSenha(senha);
-        m_cadastroUsuario.setEmail(email);
+        M_Usuario m_usuario = new M_Usuario();
+        m_usuario.setUsuario(usuario);
+        m_usuario.setSenha(senha);
+        m_usuario.setEmail(email);
 
-        r_cadastroUsuario.save(m_cadastroUsuario);
+        r_cadastroUsuario.save(m_usuario);
 
         return "Cadastro realizado com sucesso";
     }
