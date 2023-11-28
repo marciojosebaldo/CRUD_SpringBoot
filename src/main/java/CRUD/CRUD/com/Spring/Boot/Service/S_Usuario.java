@@ -20,5 +20,4 @@ public class S_Usuario {
 
         return r_usuario.buscarUsuarioPorEmailSenha(email, senha);
     }
-
 }
