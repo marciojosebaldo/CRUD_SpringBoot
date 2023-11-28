@@ -12,20 +12,18 @@ public class C_Home {
 
     @GetMapping("/CRUD/home")
     public static String getHome(HttpSession session) {
-        if(session.getAttribute("usuario") != null) {
+        if (session.getAttribute("usuario") != null) {
             return "CRUD/home";
         } else {
             return "redirect:/";
         }
     }
 
-    @PostMapping("/cadastrarProduto")
-    public static String cadastrarProduto(@RequestParam("nome") String nome,
-                                          @RequestParam("quantidade") String quantidade,
-                                          @RequestParam("valor") String valor) {
+    @PostMapping("/CRUD/home")
+    public static void cadastrarProduto(@RequestParam("nome") String nome,
+                                        @RequestParam("quantidade") String quantidade,
+                                        @RequestParam("valor") String valor) {
 
         S_Produto.cadastroProduto(nome, quantidade, valor);
-
-        return "Produto cadastrado com sucesso";
     }
 }
