@@ -3,7 +3,6 @@ package CRUD.CRUD.com.Spring.Boot.Service;
 import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_Produto;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class S_Produto {
