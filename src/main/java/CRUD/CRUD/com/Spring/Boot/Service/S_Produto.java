@@ -13,14 +13,17 @@ public class S_Produto {
         this.r_produto = r_produto;
     }
 
-    public static String cadastroProduto(String nome, int quantidade, float valor) {
+    public static String cadastroProduto(String nome, String quantidade, String valor) {
 
         String mensagem = "";
 
+        int quantidadeInt = 0;
+        float valorFloat = 0;
+
         M_Produto m_produto = new M_Produto();
         m_produto.setNome(nome);
-        m_produto.setQuantidade(quantidade);
-        m_produto.setValor(valor);
+        m_produto.setQuantidade(quantidadeInt = Integer.parseInt(quantidade));
+        m_produto.setValor(valorFloat = Float.parseFloat(valor));
 
         r_produto.save(m_produto);
 
