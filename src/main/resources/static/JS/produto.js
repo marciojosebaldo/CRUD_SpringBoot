@@ -1,7 +1,7 @@
-$("#cadastro"),click();
+$("#cadastrar").click(cadastroProduto);
 
 function cadastroProduto(){
-    let nome = $("nome").val();
+    let nome = $("#nome").val();
     let quantidade = $("#quantidade").val();
     let valor = $("#nome").val();
 
@@ -15,7 +15,7 @@ function cadastroProduto(){
         },
         success: function(data){
             if(data) {
-                window.location.href: "/CRUD/home";
+                window.location.href="/cadastroProduto";
             } else {
                 alert("Não foi possível cadastrar o produto")
             }

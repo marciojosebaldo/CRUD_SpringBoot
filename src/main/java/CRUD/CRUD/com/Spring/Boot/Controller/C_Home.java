@@ -19,10 +19,12 @@ public class C_Home {
         }
     }
 
-    @PostMapping("/CRUD/home")
+    @PostMapping("/cadastroProduto")
     public static void cadastrarProduto(@RequestParam("nome") String nome,
                                         @RequestParam("quantidade") String quantidade,
                                         @RequestParam("valor") String valor) {
+
+        int i = 0;
 
         S_Produto.cadastroProduto(nome, quantidade, valor);
     }
