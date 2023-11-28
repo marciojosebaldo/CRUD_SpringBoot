@@ -19,7 +19,7 @@ public class C_Home {
         }
     }
 
-    @PostMapping("/CRUD/home")
+    @PostMapping("/cadastrarProduto")
     public static String cadastrarProduto(@RequestParam("nome") String nome,
                                           @RequestParam("quantidade") String quantidade,
                                           @RequestParam("valor") String valor) {
