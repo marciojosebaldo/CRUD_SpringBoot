@@ -6,7 +6,7 @@ function fazerLogin(){
 
     $.ajax({
         type: "POST",
-        url: "/cadastroProduto",
+        url: "/Login/login",
         data: {
             email: email,
             senha: senha
