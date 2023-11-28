@@ -14,11 +14,17 @@ public class S_Produto {
         this.r_produto = r_produto;
     }
 
-    public static M_Produto cadastroProduto(@RequestParam("nome") String nome,
-                                            @RequestParam("quantidade") int quantidade,
-                                            @RequestParam("valor") float valor) {
-        M_Produto m_produto;
+    public static String cadastroProduto(String nome, int quantidade, float valor) {
 
-        return null;
+        String mensagem = "";
+
+        M_Produto m_produto = new M_Produto();
+        m_produto.setNome(nome);
+        m_produto.setQuantidade(quantidade);
+        m_produto.setValor(valor);
+
+        r_produto.save(m_produto);
+
+        return "Produto cadastrado com sucesso";
     }
 }

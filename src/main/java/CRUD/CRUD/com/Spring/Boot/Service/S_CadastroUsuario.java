@@ -15,8 +15,6 @@ public class S_CadastroUsuario {
 
     public static String cadastroUsuario(String usuario, String senha, String email) {
 
-        String mensagem = "";
-
         M_Usuario m_usuario = new M_Usuario();
         m_usuario.setUsuario(usuario);
         m_usuario.setSenha(senha);
