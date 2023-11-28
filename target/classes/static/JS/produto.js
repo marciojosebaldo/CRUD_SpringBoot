@@ -1,0 +1,7 @@
+$("#cadastro")
+
+$("#excluir")
+
+$("#atualizar")
+
+$("#visualizar")
