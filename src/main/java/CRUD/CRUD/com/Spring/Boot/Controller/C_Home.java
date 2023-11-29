@@ -40,7 +40,7 @@ public class C_Home {
     public static String excluirProduto(@RequestParam("id") String id) {
         String mensagem = "";
 
-
+        S_Produto.excluirProduto(id);
 
         mensagem = "Produto excluído com sucesso";
 

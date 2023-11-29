@@ -33,7 +33,9 @@ public class S_Produto {
     public static String excluirProduto(String id) {
         String mensagem = "";
 
-        
+        Long idInt = Long.parseLong(id);
+
+        r_produto.deleteById(idInt);
 
         return "Produto excluído com sucesso";
     }

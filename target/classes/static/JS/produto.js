@@ -15,7 +15,7 @@ function cadastroProduto(){
         },
         success: function(data){
             alert(data);
-            
+
             if(data) {
                 window.location.href="/CRUD/home";
             } else {
@@ -28,7 +28,31 @@ function cadastroProduto(){
     });
 }
 
-$("#excluir")
+$("#excluir").click(excluirProduto);
+
+function excluirProduto(){
+    let id = $("#id").val();
+
+    $.ajax({
+        type: "POST",
+        url: "/excluirProduto",
+        data: {
+            id: id
+        },
+        success: function(data) {
+            alert(data);
+
+            if(data) {
+                window.location.href="/CRUD/home";
+            } else {
+                alert("Não foi possível excluir o produto")
+            }
+        },
+        error: function(){
+            alert("Falha ao excluir o produto");
+        }
+    });
+}
 
 $("#atualizar")
 
