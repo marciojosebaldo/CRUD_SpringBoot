@@ -2117,3 +2117,6 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [Produ
 2023-11-28T21:52:09.810-03:00  INFO 14796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-11-28T21:52:09.817-03:00  INFO 14796 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
 2023-11-28T21:52:10.138-03:00  WARN 14796 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [152] milliseconds.
+2023-11-28T22:04:26.604-03:00  INFO 14796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-28T22:04:26.608-03:00  INFO 14796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-11-28T22:04:26.614-03:00  INFO 14796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
