@@ -34,4 +34,16 @@ public class C_Home {
 
         return mensagem;
     }
+
+    @PostMapping("/excluirProduto")
+    @ResponseBody
+    public static String excluirProduto(@RequestParam("id") String id) {
+        String mensagem = "";
+
+
+
+        mensagem = "Produto excluído com sucesso";
+
+        return mensagem;
+    }
 }

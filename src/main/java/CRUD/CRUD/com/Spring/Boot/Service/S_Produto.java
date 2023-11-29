@@ -29,4 +29,12 @@ public class S_Produto {
 
         return "Produto cadastrado com sucesso";
     }
+
+    public static String excluirProduto(String id) {
+        String mensagem = "";
+
+        
+
+        return "Produto excluído com sucesso";
+    }
 }
