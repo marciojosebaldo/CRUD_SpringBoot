@@ -14,6 +14,8 @@ function cadastroProduto(){
             valor: valor
         },
         success: function(data){
+            alert(data);
+            
             if(data) {
                 window.location.href="/CRUD/home";
             } else {
@@ -21,7 +23,7 @@ function cadastroProduto(){
             }
         },
         error: function(){
-            alert(data.mensagem);
+            alert("Falha ao cadastrar o produto");
         }
     });
 }
