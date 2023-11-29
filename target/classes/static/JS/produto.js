@@ -15,13 +15,13 @@ function cadastroProduto(){
         },
         success: function(data){
             if(data) {
-                window.location.href="CRUD/home";
+                window.location.href="/CRUD/home";
             } else {
                 alert("Não foi possível cadastrar o produto")
             }
         },
         error: function(){
-            alert("Falha na comunicação!");
+            alert(data.mensagem);
         }
     });
 }

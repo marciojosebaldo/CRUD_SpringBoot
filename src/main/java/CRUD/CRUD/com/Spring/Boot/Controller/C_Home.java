@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class C_Home {
@@ -20,14 +21,17 @@ public class C_Home {
     }
 
     @PostMapping("/cadastroProduto")
+    @ResponseBody
     public static String cadastrarProduto(@RequestParam("nome") String nome,
                                         @RequestParam("quantidade") String quantidade,
                                         @RequestParam("valor") String valor) {
 
-        int i = 0;
+        String mensagem = "";
 
         S_Produto.cadastroProduto(nome, quantidade, valor);
 
-        return "Produto cadastrado com sucesso";
+        mensagem = "Produto cadastrado com sucesso";
+
+        return mensagem;
     }
 }
