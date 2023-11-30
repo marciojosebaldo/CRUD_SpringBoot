@@ -28,6 +28,7 @@ function cadastroProduto(){
     });
 }
 
+
 $("#excluir").click(excluirProduto);
 
 function excluirProduto(){
@@ -54,6 +55,15 @@ function excluirProduto(){
     });
 }
 
-$("#atualizar")
 
-$("#visualizar")
+$("#visualizar").click(visualizarProduto);
+
+function visualizarProduto(){
+
+}
+
+$("#atualizar").click(atualizarProduto);
+
+function atualizarProduto(){
+
+}

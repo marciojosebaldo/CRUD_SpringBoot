@@ -31,6 +31,8 @@ function cadastroProduto(){
 
 $("#excluir").click(excluirProduto);
 
+//Antes de excluir o produto, conferir se há o produto para ser excluído
+
 function excluirProduto(){
     let id = $("#id").val();
 
@@ -59,15 +61,11 @@ function excluirProduto(){
 $("#visualizar").click(visualizarProduto);
 
 function visualizarProduto(){
-    let
+
 }
 
 $("#atualizar").click(atualizarProduto);
 
 function atualizarProduto(){
-
-$.ajax{
-
-}
 
 }
