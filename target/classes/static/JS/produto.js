@@ -61,7 +61,7 @@ function excluirProduto(){
 $("#visualizar").click(visualizarProduto);
 
 function visualizarProduto(){
-    let visualizar = &("#visualizar").val();
+    let visualizar = $("#visualizar").val();
 
     $.ajax({
         type: "POST",
