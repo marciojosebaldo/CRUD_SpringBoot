@@ -39,4 +39,12 @@ public class S_Produto {
 
         return "Produto excluído com sucesso";
     }
+
+    public static String listarProduto() {
+        String mensagem = "";
+
+        r_produto.findAll();
+
+        return "Listagem completa";
+    }
 }
