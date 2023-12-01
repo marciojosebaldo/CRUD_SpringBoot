@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -53,6 +54,11 @@
         <input id="visualizar" value="Visualizar" type="submit" class="btn btn-primary">
         <table class="table table-striped">
             <tbody>
+            <tr>
+                <th>Nome</th>
+                <th>Qtde</th>
+                <th>Valor</th>
+            </tr>
             <tr th:each="produto : ${listaDeProduto}">
                 <td th:text="${produto.nome}"></td>
                 <td th:text="${produto.quantidade}"></td>

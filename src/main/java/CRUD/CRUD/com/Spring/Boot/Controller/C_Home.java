@@ -63,8 +63,6 @@ public class C_Home {
 
         model.addAttribute("produto", session.getAttribute("produto"));
 
-        S_Produto.listarProduto();
-
         mensagem = "Listagem completa";
 
         return mensagem;
