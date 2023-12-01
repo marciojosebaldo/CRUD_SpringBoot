@@ -4,6 +4,8 @@ import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_Produto;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class S_Produto {
 
@@ -40,11 +42,7 @@ public class S_Produto {
         return "Produto excluído com sucesso";
     }
 
-    public static String listarProduto() {
-        String mensagem = "";
-
-        r_produto.findAll();
-
-        return "Listagem completa";
+    public static List<M_Produto> listarProduto() {
+        return r_produto.findAll();
     }
 }
