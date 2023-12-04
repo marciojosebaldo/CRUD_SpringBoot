@@ -52,9 +52,8 @@ public class C_Home {
     }
 
     @PostMapping("/listarProduto")
-    public String listarProduto(Model model){
-        List<M_Produto> listaDeProduto = S_Produto.listarProduto();
-        model.addAttribute("listaDeProduto", listaDeProduto);
-        return listaDeProduto;
+    @ResponseBody
+    public List<M_Produto> listarProduto(){
+        return S_Produto.listarProduto();
     }
 }
