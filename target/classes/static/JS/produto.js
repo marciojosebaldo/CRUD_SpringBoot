@@ -65,7 +65,16 @@ function visualizarProduto(){
         type: "POST",
         url: "/listarProduto",
         success: function(data) {
-            $("#tabelaProdutos tbody").empty();
+            let tabela = $("#tabelaProdutos tbody");
+
+            tabela.empty();
+
+            tabela.append(
+                "<tr>" +
+                "<th>Nome</th>" +
+                "<th>Qtde</th>" +
+                "<th>Valor</th>" +
+                "</tr>");
 
             $.each(data, function(index, produto) {
                 var newRow = "<tr>" +
@@ -74,9 +83,9 @@ function visualizarProduto(){
                     "<td>" + produto.valor + "</td>" +
                     "</tr>";
 
-                    $("#tabelaProdutos tbody").append(newRow);
-                    });
-            },
+                    tabela.append(newRow);
+            });
+        },
         error: function(){
             alert("Falha ao listar o(s) produto(s)");
         }

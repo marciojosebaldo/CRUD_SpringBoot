@@ -54,11 +54,6 @@
         <input id="visualizar" value="Visualizar" type="submit" class="btn btn-primary">
         <table id="tabelaProdutos" class="table table-striped mt-3">
             <tbody>
-            <tr>
-                <th>Nome</th>
-                <th>Qtde</th>
-                <th>Valor</th>
-            </tr>
             <tr th:each="produto : ${listaDeProduto}">
                 <td th:text="${produto.nome}"></td>
                 <td th:text="${produto.quantidade}"></td>
