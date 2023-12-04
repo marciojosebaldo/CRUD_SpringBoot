@@ -61,22 +61,11 @@ function excluirProduto(){
 $("#visualizar").click(visualizarProduto);
 
 function visualizarProduto(){
-    let visualizar = $("#visualizar").val();
-
     $.ajax({
         type: "POST",
         url: "/listarProduto",
-        data: {
-            visualizar: visualizar
-        },
         success: function(data) {
-            alert(data);
-
-            if(data) {
-                window.location.href="/CRUD/home";
-            } else {
-                alert("Não foi possível listar o(s) produto(s)")
-            }
+            $("#tabelaProdutos").html(data);
         },
         error: function(){
             alert("Falha ao listar o(s) produto(s)");

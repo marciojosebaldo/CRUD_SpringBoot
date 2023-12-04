@@ -1,3 +1,5 @@
+Nome banco de dados: CRUD
+
 CREATE TABLE usuario (
 	id SERIAL PRIMARY KEY,
 	usuario VARCHAR(255) not null UNIQUE,

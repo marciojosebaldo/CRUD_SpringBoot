@@ -52,19 +52,9 @@ public class C_Home {
     }
 
     @PostMapping("/listarProduto")
-    @ResponseBody
-    public static String listarProduto(Model model,
-                                       HttpSession session){
-        String mensagem = "";
-
+    public String listarProduto(Model model){
         List<M_Produto> listaDeProduto = S_Produto.listarProduto();
-
         model.addAttribute("listaDeProduto", listaDeProduto);
-
-        model.addAttribute("produto", session.getAttribute("produto"));
-
-        mensagem = "Listagem completa";
-
-        return mensagem;
+        return listaDeProduto;
     }
 }
