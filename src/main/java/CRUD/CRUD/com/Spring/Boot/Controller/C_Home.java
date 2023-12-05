@@ -55,4 +55,11 @@ public class C_Home {
     public List<M_Produto> listarProduto(){
         return S_Produto.listarProduto();
     }
+
+    @PostMapping("/atualizarProduto")
+    @ResponseBody
+    public static String atualizarProduto() {
+
+        return "";
+    }
 }
