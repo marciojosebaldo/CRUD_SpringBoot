@@ -77,10 +77,15 @@ function visualizarProduto(){
                 "</tr>");
 
             $.each(data, function(index, produto) {
-                var newRow = "<tr>" +
+                var newRow =
+                    "<tr>" +
                     "<td>" + produto.nome + "</td>" +
                     "<td>" + produto.quantidade + "</td>" +
                     "<td>" + produto.valor + "</td>" +
+                    "<td>" +
+                    "<button type='button' class='btn btn-success'>Editar</button>" +
+                    "<button type='button' class='btn btn-danger'>Excluir</button>";
+                    "</td>" +
                     "</tr>";
 
                     tabela.append(newRow);
