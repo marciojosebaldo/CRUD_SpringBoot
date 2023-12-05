@@ -85,6 +85,12 @@ function visualizarProduto(){
 
                     tabela.append(newRow);
             });
+
+            if(data.length > 5) {
+                $("#tabelaProdutos").addClass("scrollable-table");
+            } else {
+                $("#tabelaProdutos").removeClass("scrollable-table");
+            }
         },
         error: function(){
             alert("Falha ao listar o(s) produto(s)");

@@ -4,7 +4,6 @@ import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Service.S_Produto;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
