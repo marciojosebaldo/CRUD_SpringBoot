@@ -43,23 +43,17 @@ public class C_Home {
         return "/CRUD/tabelaProdutos";
     }
 
+    @GetMapping("/excluirProduto/{id}")
+    @ResponseBody
+    public String excluirProduto(@PathVariable("id") String id){
+        S_Produto.excluirProduto(id);
+        return "/CRUD/tabelaProdutos";
+    }
+
     @PostMapping("/atualizarProduto")
     @ResponseBody
     public static String atualizarProduto() {
 
         return "";
-    }
-
-    // Sugestão do professor para receber os ids para exclusão dos itens
-    @GetMapping("/excluirProduto/{id}")
-    @ResponseBody
-    public String excluirProduto(@PathVariable("id") Long id){
-        String mensagem = "";
-
-//        S_Produto.excluirProduto(id);
-
-        mensagem = "Produto excluído com sucesso";
-
-        return mensagem;
     }
 }

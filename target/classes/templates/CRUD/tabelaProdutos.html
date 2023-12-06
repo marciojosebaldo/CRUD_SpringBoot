@@ -10,14 +10,13 @@
             </thead>
             <tbody>
             <tr th:each="produto : ${listaDeProduto}">
-                <!-- Sugestão do professor        <td th:text="${produto.id}"><a th:href="${'/delete/'+ produto.id}" class="btn btn-danger">excluir</a></td>-->
                 <td th:text="${produto.nome}"></td>
                 <td th:text="${produto.quantidade}"></td>
                 <td th:text="${produto.valor}"></td>
                 <td>
                     <button type='button' class='btn btn-success btn-editar'>Editar</button>
                     &nbsp
-                    <button type='button' class='btn btn-danger btn-excluir'>Excluir</button>
+                    <a th:href="${'/excluirProduto/'+ produto.id}" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
             </tbody>
