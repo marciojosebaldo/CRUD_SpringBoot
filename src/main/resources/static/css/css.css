@@ -1,9 +1,4 @@
 #tabelaProdutos {
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.scrollable-table{
-    max-height: 300px;
+    max-height: 600px;
     overflow-y: auto;
 }
