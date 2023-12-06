@@ -31,8 +31,6 @@ function cadastroProduto(){
 
 $("#excluir").click(excluirProduto);
 
-//Antes de excluir o produto, conferir se há o produto para ser excluído
-
 function excluirProduto(){
     let id = $("#id").val();
 
@@ -58,48 +56,22 @@ function excluirProduto(){
 }
 
 
-$("#visualizar").click(visualizarProduto);
+$("#visualizar").click(function () {
+    $("#tabelaProdutos").load("/CRUD/tabelaProdutos", function() {
+        botoesEditarExcluir();
+    });
+});
 
-function visualizarProduto(){
-    $.ajax({
-        type: "POST",
-        url: "/listarProduto",
-        success: function(data) {
-            let tabela = $("#tabelaProdutos tbody");
+function botoesEditarExcluir() {
+    $(".btn btn-editar").off("click");
+    $(".btn btn-excluir").off("click");
 
-            tabela.empty();
+    $(".btn-editar").click(function () {
 
-            tabela.append(
-                "<tr>" +
-                "<th>Nome</th>" +
-                "<th>Qtde</th>" +
-                "<th>Valor</th>" +
-                "</tr>");
+    });
 
-            $.each(data, function(index, produto) {
-                var newRow =
-                    "<tr>" +
-                    "<td>" + produto.nome + "</td>" +
-                    "<td>" + produto.quantidade + "</td>" +
-                    "<td>" + produto.valor + "</td>" +
-                    "<td>" +
-                    "<button type='button' class='btn btn-success'>Editar</button>" +
-                    "<button type='button' class='btn btn-danger'>Excluir</button>";
-                    "</td>" +
-                    "</tr>";
+    $(".btn-excluir").click(function () {
 
-                    tabela.append(newRow);
-            });
-
-            if(data.length > 5) {
-                $("#tabelaProdutos").addClass("scrollable-table");
-            } else {
-                $("#tabelaProdutos").removeClass("scrollable-table");
-            }
-        },
-        error: function(){
-            alert("Falha ao listar o(s) produto(s)");
-        }
     });
 }
 

@@ -4,10 +4,7 @@ import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Service.S_Produto;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,19 +35,7 @@ public class C_Home {
         return mensagem;
     }
 
-    @PostMapping("/excluirProduto")
-    @ResponseBody
-    public static String excluirProduto(@RequestParam("id") String id) {
-        String mensagem = "";
-
-        S_Produto.excluirProduto(id);
-
-        mensagem = "Produto excluído com sucesso";
-
-        return mensagem;
-    }
-
-    @PostMapping("/listarProduto")
+    @GetMapping("/CRUD/tabelaProdutos")
     @ResponseBody
     public List<M_Produto> listarProduto(){
         return S_Produto.listarProduto();
@@ -61,5 +46,18 @@ public class C_Home {
     public static String atualizarProduto() {
 
         return "";
+    }
+
+    // Sugestão do professor para receber os ids para exclusão dos itens
+    @GetMapping("/excluirProduto/{id}")
+    @ResponseBody
+    public String excluirProduto(@PathVariable("id") Long id){
+        String mensagem = "";
+
+//        S_Produto.excluirProduto(id);
+
+        mensagem = "Produto excluído com sucesso";
+
+        return mensagem;
     }
 }
