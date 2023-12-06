@@ -44,7 +44,6 @@ public class C_Home {
     }
 
     @GetMapping("/excluirProduto/{id}")
-    @ResponseBody
     public String excluirProduto(@PathVariable("id") String id){
         S_Produto.excluirProduto(id);
         return "/CRUD/home";
