@@ -33,8 +33,14 @@ $("#visualizar").click(visualizarProduto);
 function visualizarProduto() {
     $.ajax({
         type: "GET",
-
-    })
+        url: "/CRUD/tabelaProdutos",
+        success: function(data) {
+            $("#tabelaProdutos").html(data);
+        },
+        error: function() {
+            alert("Falha ao carregar a lista de produtos");
+        }
+    });
 }
 
 

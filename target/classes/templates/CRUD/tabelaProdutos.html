@@ -1,29 +1,31 @@
-<table>
-    <thead>
-    <tr>
-        <th>Nome</th>
-        <th>Qtde</th>
-        <th>Valor</th>
-        <th>Edição</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>produto.nome</td>
-        <td>produto.quantidade</td>
-        <td>produto.valor</td>
-    </tr>
+<div id="#tabelaProdutos">
+    <table>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Qtde</th>
+            <th>Valor</th>
+            <th>Edição</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>produto.nome</td>
+            <td>produto.quantidade</td>
+            <td>produto.valor</td>
+        </tr>
 
-    <tr th:each="produto : ${listaDeProduto}">
-        <!-- Sugestão do professor        <td th:text="${produto.id}"><a th:href="${'/delete/'+ produto.id}" class="btn btn-danger">excluir</a></td>-->
-        <td th:text="${produto.nome}"></td>
-        <td th:text="${produto.quantidade}"></td>
-        <td th:text="${produto.valor}"></td>
-        <td>
-            <button type='button' class='btn btn-success btn-editar'>Editar</button>
-            &nbsp
-            <button type='button' class='btn btn-danger btn-excluir'>Excluir</button>
-        </td>
-    </tr>
-    </tbody>
-</table>
+        <tr th:each="produto : ${listaDeProduto}">
+            <!-- Sugestão do professor        <td th:text="${produto.id}"><a th:href="${'/delete/'+ produto.id}" class="btn btn-danger">excluir</a></td>-->
+            <td th:text="${produto.nome}"></td>
+            <td th:text="${produto.quantidade}"></td>
+            <td th:text="${produto.valor}"></td>
+            <td>
+                <button type='button' class='btn btn-success btn-editar'>Editar</button>
+                &nbsp
+                <button type='button' class='btn btn-danger btn-excluir'>Excluir</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

@@ -4,6 +4,7 @@ import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Service.S_Produto;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -36,9 +37,10 @@ public class C_Home {
     }
 
     @GetMapping("/CRUD/tabelaProdutos")
-    @ResponseBody
-    public List<M_Produto> listarProduto(){
-        return S_Produto.listarProduto();
+    public String listarProduto(Model model) {
+        List<M_Produto> listaDeProduto = S_Produto.listarProduto();
+        model.addAttribute("listaDeProduto", listaDeProduto);
+        return "/CRUD/tabelaProdutos";
     }
 
     @PostMapping("/atualizarProduto")
