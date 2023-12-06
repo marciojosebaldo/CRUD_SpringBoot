@@ -47,7 +47,7 @@ public class C_Home {
     @ResponseBody
     public String excluirProduto(@PathVariable("id") String id){
         S_Produto.excluirProduto(id);
-        return "/CRUD/tabelaProdutos";
+        return "/CRUD/home";
     }
 
     @PostMapping("/atualizarProduto")
