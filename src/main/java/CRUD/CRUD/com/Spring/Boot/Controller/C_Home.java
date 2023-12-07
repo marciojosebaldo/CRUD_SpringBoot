@@ -49,9 +49,8 @@ public class C_Home {
         return "/CRUD/home";
     }
 
-    @PostMapping("/atualizarProduto")
-    @ResponseBody
-    public static String atualizarProduto() {
+    @PostMapping ("/atualizarProduto/{id}")
+    public String atualizarProduto(@PathVariable("id") String id) {
 
         return "";
     }

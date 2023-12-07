@@ -45,4 +45,13 @@ public class S_Produto {
     public static List<M_Produto> listarProduto() {
         return r_produto.findAll();
     }
+
+    public static String atualizarProduto(String id){
+        // Tendo o id é possível fazer a atualização. Sem o id, só fará o salvamento do dado
+        Long Id = Long.parseLong(id);
+
+        M_Produto m_produto = new M_Produto();
+
+        return "Produto atualizado com sucesso";
+    }
 }

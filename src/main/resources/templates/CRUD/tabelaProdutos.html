@@ -14,7 +14,7 @@
                 <td th:text="${produto.quantidade}"></td>
                 <td th:text="${produto.valor}"></td>
                 <td>
-                    <button type='button' class='btn btn-success btn-editar'>Editar</button>
+                    <a th:ref="${'/atualizarProduto/'+ produto.id}"class="btn btn-success">Editar</a>
                     &nbsp
                     <a th:href="${'/excluirProduto/'+ produto.id}" class="btn btn-danger">Excluir</a>
                 </td>
