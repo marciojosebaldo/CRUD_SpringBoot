@@ -50,8 +50,19 @@ public class C_Home {
     }
 
     @PostMapping ("/atualizarProduto/{id}")
-    public String atualizarProduto(@PathVariable("id") String id) {
+    @ResponseBody
+    public String atualizarProduto(@PathVariable("id") String id,
+                                   @RequestParam("nome") String nome,
+                                   @RequestParam("quantidade") String quantidade,
+                                   @RequestParam("valor") String valor) {
 
-        return "";
+       M_Produto produtoAtualizado = new M_Produto();
+       produtoAtualizado.setNome(nome);
+       produtoAtualizado.setQuantidade(Integer.parseInt(quantidade));
+       produtoAtualizado.setValor(Float.parseFloat(valor));
+
+       String mensagem = S_Produto.atualizarProduto(id, produtoAtualizado);
+
+       return mensagem;
     }
 }

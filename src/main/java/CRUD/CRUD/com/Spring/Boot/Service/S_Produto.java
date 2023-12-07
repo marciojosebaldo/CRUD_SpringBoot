@@ -2,9 +2,12 @@ package CRUD.CRUD.com.Spring.Boot.Service;
 
 import CRUD.CRUD.com.Spring.Boot.Model.M_Produto;
 import CRUD.CRUD.com.Spring.Boot.Repository.R_Produto;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class S_Produto {
@@ -46,12 +49,28 @@ public class S_Produto {
         return r_produto.findAll();
     }
 
-    public static String atualizarProduto(String id){
-        // Tendo o id é possível fazer a atualização. Sem o id, só fará o salvamento do dado
+    public static String atualizarProduto(String id, M_Produto m_produtoAtualizado){
         Long Id = Long.parseLong(id);
 
-        M_Produto m_produto = new M_Produto();
+        Optional<M_Produto> m_produtoOptional = r_produto.findById(Id);
 
-        return "Produto atualizado com sucesso";
+        if (m_produtoOptional.isPresent()) {
+            M_Produto produtoExistente = m_produtoOptional.get();
+
+            produtoExistente.setNome(m_produtoAtualizado.getNome());
+            produtoExistente.setQuantidade(m_produtoAtualizado.getQuantidade());
+            produtoExistente.setValor(m_produtoAtualizado.getValor());
+
+            try {
+                r_produto.save(produtoExistente);
+            } catch (DataIntegrityViolationException e) {
+                return "Erro ao atualizar produto: " + e.getMessage();
+            }
+
+
+            return "Produto atualizado com sucesso";
+        } else {
+            return "Produto não encontrado";
+        }
     }
 }
