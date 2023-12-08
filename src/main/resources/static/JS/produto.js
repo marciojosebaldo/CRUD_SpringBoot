@@ -70,7 +70,20 @@ function excluirProduto() {
     });
 }
 
-$("#atualizar").click(atualizarProduto);
+$("#editarProduto").click(editarProduto);
 
-function atualizarProduto() {
+function editarProduto(){
+    let produtoId = $(this).data("id");
+
+    $.ajax({
+        type: "POST",
+        url: "/atualizarProduto/"+produtoId,
+        success: function(data) {
+            $("exampleModal .modal-title").text("Editar Produto");
+            $("exampleModal .modal-body").html(data);
+        },
+        error: function(){
+            alert("Falha ao enviar a atualização do produto");
+        }
+    });
 }
