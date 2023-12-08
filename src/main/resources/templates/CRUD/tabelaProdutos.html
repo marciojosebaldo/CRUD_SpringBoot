@@ -14,7 +14,7 @@
             <td th:text="${produto.quantidade}"></td>
             <td th:text="${produto.valor}"></td>
             <td>
-                <a th:ref="${'/atualizarProduto/'+ produto.id}" id="editarProduto" class="btn btn-success" data-toggle="modal" data-target="#modalEditarProduto">Editar</a>
+                <a th:ref="${'/atualizarProduto/'+ produto.id}" id="editarProduto" class="btn btn-success" data-toggle="modal" data-target="#modalEditarProduto" onclick="preencherDetalhes(${produto.id})">Editar</a>
 
                 <!-- Modal -->
                 <div class="modal fade" id="modalEditarProduto" tabindex="-1" role="dialog"
@@ -22,23 +22,26 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Detalhes do Produto</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-                                ...
+                                <div id="detalhesProduto">
+                                    <p th:text="${produto.nome}"></p>
+                                    <p th:text="${produto.quantidade}"></p>
+                                    <p th:text="${produto.valor}"></p>
+                                </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Salvar alterações</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--Fim Modal-->
-
                 &nbsp
                 <a th:href="${'/excluirProduto/'+ produto.id}" class="btn btn-danger">Excluir</a>
             </td>

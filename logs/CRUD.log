@@ -8759,3 +8759,22 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [tabel
 2023-12-08T19:16:21.009-03:00  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2023-12-08T19:16:21.012-03:00  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 2023-12-08T19:16:21.260-03:00  WARN 11816 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [142] milliseconds.
+2023-12-08T19:38:10.259-03:00  INFO 11816 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T19:38:10.265-03:00  INFO 11816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-08T19:38:10.277-03:00  INFO 11816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08T19:38:32.322-03:00  INFO 6076 --- [main] C.C.c.S.B.CrudComSpringBootApplication   : Starting CrudComSpringBootApplication using Java 17.0.6 with PID 6076 (C:\Users\Aluno\Desktop\CRUD_SpringBoot\target\classes started by Aluno in C:\Users\Aluno\Desktop\CRUD_SpringBoot)
+2023-12-08T19:38:32.326-03:00  INFO 6076 --- [main] C.C.c.S.B.CrudComSpringBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T19:38:33.802-03:00  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T19:38:33.946-03:00  INFO 6076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 3 JPA repository interfaces.
+2023-12-08T19:38:35.287-03:00  INFO 6076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T19:38:35.324-03:00  INFO 6076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T19:38:35.325-03:00  INFO 6076 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-08T19:38:35.593-03:00  INFO 6076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-08T19:38:35.594-03:00  INFO 6076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3142 ms
+2023-12-08T19:38:35.906-03:00  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T19:38:36.362-03:00  INFO 6076 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@287ae90c
+2023-12-08T19:38:36.365-03:00  INFO 6076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T19:38:36.457-03:00  INFO 6076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T19:38:36.612-03:00  INFO 6076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-08T19:38:36.617-03:00  INFO 6076 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T19:38:37.270-03:00  INFO 6076 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
