@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 $("#cadastrar").click(cadastroProduto);
 
 function cadastroProduto() {
@@ -70,7 +72,7 @@ function excluirProduto() {
     });
 }
 
-$("#editarProduto").click(editarProduto);
+$("a.editarProduto").click(editarProduto);
 
 function editarProduto(){
     let produtoId = $(this).data("id");
@@ -79,11 +81,12 @@ function editarProduto(){
         type: "POST",
         url: "/atualizarProduto/"+produtoId,
         success: function(data) {
-            $("exampleModal .modal-title").text("Editar Produto");
-            $("exampleModal .modal-body").html(data);
+            $("modalEditarProduto .modal-title").text("Editar Produto");
+            $("modalEditarProduto .modal-body").html(data);
         },
         error: function(){
             alert("Falha ao enviar a atualização do produto");
         }
     });
 }
+});

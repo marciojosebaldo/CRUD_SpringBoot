@@ -1,4 +1,4 @@
-<div id="#tabelaProdutos" class="table-responsive">
+<div id="tabelaProdutos" class="table-responsive">
     <table class="table">
         <thead>
         <tr>
@@ -14,7 +14,7 @@
             <td th:text="${produto.quantidade}"></td>
             <td th:text="${produto.valor}"></td>
             <td>
-                <a th:ref="${'/atualizarProduto/'+ produto.id}" id="editarProduto" class="btn btn-success" data-toggle="modal" data-target="#modalEditarProduto" onclick="preencherDetalhes(${produto.id})">Editar</a>
+                <a th:ref="${'/atualizarProduto/'+ produto.id}" class="btn btn-success editarProduto" data-toggle="modal" data-target="#modalEditarProduto" th:onclick="'preencherDetalhes(\'' + ${produto.id} + '\');'">Editar</a>
 
                 <!-- Modal -->
                 <div class="modal fade" id="modalEditarProduto" tabindex="-1" role="dialog"
