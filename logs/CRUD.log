@@ -8732,3 +8732,30 @@ org.thymeleaf.exceptions.TemplateInputException: Error resolving template [tabel
 2023-12-06T21:52:00.739-03:00  INFO 5816 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-12-06T21:52:00.747-03:00  INFO 5816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2023-12-06T21:52:00.758-03:00  INFO 5816 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-08T19:11:38.035-03:00  INFO 11816 --- [main] C.C.c.S.B.CrudComSpringBootApplication   : Starting CrudComSpringBootApplication using Java 17.0.6 with PID 11816 (C:\Users\Aluno\Desktop\CRUD_SpringBoot\target\classes started by Aluno in C:\Users\Aluno\Desktop\CRUD_SpringBoot)
+2023-12-08T19:11:38.064-03:00  INFO 11816 --- [main] C.C.c.S.B.CrudComSpringBootApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-08T19:11:39.712-03:00  INFO 11816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-12-08T19:11:39.864-03:00  INFO 11816 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 3 JPA repository interfaces.
+2023-12-08T19:11:41.748-03:00  INFO 11816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-08T19:11:41.774-03:00  INFO 11816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-08T19:11:41.774-03:00  INFO 11816 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-12-08T19:11:42.066-03:00  INFO 11816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-08T19:11:42.067-03:00  INFO 11816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3862 ms
+2023-12-08T19:11:42.411-03:00  INFO 11816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-08T19:11:42.922-03:00  INFO 11816 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e1b374c
+2023-12-08T19:11:42.926-03:00  INFO 11816 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-08T19:11:43.109-03:00  INFO 11816 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-12-08T19:11:43.347-03:00  INFO 11816 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-12-08T19:11:43.352-03:00  INFO 11816 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-12-08T19:11:43.889-03:00  INFO 11816 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-12-08T19:11:44.003-03:00  WARN 11816 --- [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2023-12-08T19:11:45.508-03:00  INFO 11816 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-12-08T19:11:45.513-03:00  INFO 11816 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-12-08T19:11:46.205-03:00  INFO 11816 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-12-08T19:11:46.305-03:00  WARN 11816 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-12-08T19:11:47.143-03:00  INFO 11816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-08T19:11:47.165-03:00  INFO 11816 --- [main] C.C.c.S.B.CrudComSpringBootApplication   : Started CrudComSpringBootApplication in 10.137 seconds (process running for 11.326)
+2023-12-08T19:16:21.008-03:00  INFO 11816 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-12-08T19:16:21.009-03:00  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-12-08T19:16:21.012-03:00  INFO 11816 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-12-08T19:16:21.260-03:00  WARN 11816 --- [http-nio-8080-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [142] milliseconds.
