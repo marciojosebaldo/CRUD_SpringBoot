@@ -1,5 +1,3 @@
-$(document).ready(function() {
-
 $("#cadastrar").click(cadastroProduto);
 
 function cadastroProduto() {
@@ -72,21 +70,30 @@ function excluirProduto() {
     });
 }
 
-$("a.editarProduto").click(editarProduto);
+$(document).on("click", "a.editarProduto", editarProduto);
 
-function editarProduto(){
-    let produtoId = $(this).data("id");
+function editarProduto() {
+    let produtoId = $(this).data("target").replace('#modalEditarProduto', '');
+    let modal = $("#modalEditarProduto" + produtoId);
 
-    $.ajax({
-        type: "POST",
-        url: "/atualizarProduto/"+produtoId,
-        success: function(data) {
-            $("modalEditarProduto .modal-title").text("Editar Produto");
-            $("modalEditarProduto .modal-body").html(data);
-        },
-        error: function(){
-            alert("Falha ao enviar a atualização do produto");
-        }
-    });
+    // Verificar se o modal já está aberto
+    if (!modal.hasClass('show')) {
+        $.ajax({
+            type: "POST",
+            url: "/atualizarProduto/" + produtoId,
+            success: function (data) {
+                $("#modalEditarProduto" + produtoId + " .modal-title").text("Editar Produto");
+                $("#modalEditarProduto" + produtoId + " .modal-body").html(data);
+
+                // Abrir o modal após receber os dados
+                modal.modal('show');
+            },
+            error: function () {
+                alert("Falha ao enviar a atualização do produto");
+            }
+        });
+    } else {
+        // O modal já está aberto
+        console.log("O modal já está aberto");
+    }
 }
-});

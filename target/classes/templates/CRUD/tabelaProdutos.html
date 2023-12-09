@@ -14,11 +14,11 @@
             <td th:text="${produto.quantidade}"></td>
             <td th:text="${produto.valor}"></td>
             <td>
-                <a th:ref="${'/atualizarProduto/'+ produto.id}" class="btn btn-success editarProduto" data-toggle="modal" data-target="#modalEditarProduto" th:onclick="'preencherDetalhes(\'' + ${produto.id} + '\');'">Editar</a>
+                <!-- Botão "Editar" -->
+                <a class="btn btn-success editarProduto" data-bs-toggle="modal" th:data-bs-target="'#modalEditarProduto' + ${produto.id}">Editar</a>
 
                 <!-- Modal -->
-                <div class="modal fade" id="modalEditarProduto" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" th:id="'modalEditarProduto' + ${produto.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -41,8 +41,9 @@
                         </div>
                     </div>
                 </div>
-                <!--Fim Modal-->
-                &nbsp
+                <!-- Fim Modal -->
+
+                <!-- Botão "Excluir" -->
                 <a th:href="${'/excluirProduto/'+ produto.id}" class="btn btn-danger">Excluir</a>
             </td>
         </tr>
